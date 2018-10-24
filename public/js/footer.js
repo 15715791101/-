@@ -1,0 +1,10 @@
+$(function(){
+    $.ajax({
+      url:"http://localhost:3000/footer.html",
+      type:"get",
+      success:function(res){
+        document.getElementById("footer")
+          .innerHTML=res;
+      }
+    })
+  })

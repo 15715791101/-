@@ -1,0 +1,86 @@
+$(function(){
+    if(location.search.indexOf("kw=")!=-1){
+      var kw=decodeURI(
+        location.search.split("=")[1]
+      );
+    
+ function loadPage(pno=0){  
+    $.ajax({
+        url:"http://localhost:3000/products",
+        type:"get",
+        data:{ kw, pno },
+        dataType:"json",
+        success:function(output){
+            var {data,pageCount,pno}=output;
+           //console.log(output);
+           var html="";
+           for(var p of data){
+            var {lid,title,details,pic,price,href}=p;
+            html+=`<li>
+                <div class="new_p clearfix"> </div>
+               <div class="pro_img">
+                    <a href="${href}"><img src="${pic}" alt=""/></a>
+              </div>
+              <div class="pro_infor">
+                  <div class="information">
+                     <a href="${href}">
+                       <p class="pro_text">${title}</p>
+                       <p class="pro_des">${details}</p>
+                     </a>
+                 </div>
+               <div class="pro_price">
+                   RMB&nbsp;
+                   <span>${price.toFixed(2)}</span>
+               </div>
+            </div>
+        </li>`;
+       }
+       $("#product-list").html(html)
+
+         var html=`<li class="page_up left"><a href="" >上一页</a></li>`;
+
+         for(var i=0;i<pageCount;i++){
+             //当i等于当前页面pno时添加class为page_active
+          html+=`<li class="list_16 left ${i==pno?'page_active':''}"><a href="#" >${1+i}</a></li>`         
+         }
+         html+=`<li class="page_down left" ><a href="#" >下一页</a></li>`
+         $("#page_list").html(html);
+         
+         if(pno==0)
+          $("#page_list").children(":first-child")
+              .addClass("page_xainshi");
+          if(pno==pageCount-1)
+          $("#page_list").children(":last-child")
+              .addClass("page_xainshi");       
+      }
+    });
+}     
+loadPage();//封装在函数中，首次加载调用一次，点击每一页重新加载
+
+
+
+
+$("#page_list")
+.on("click","li>a",function(){
+ 
+  var $a=$(this);
+  if($a.parent().is(":not(.page_active,.page_xainshi)")){
+    var $lis=$("#page_list>li:gt(0):not(:last)");
+    //console.log($lis);
+    var i=
+      $("#page_list>li.page_active>a").html()-1;
+    if($a.parent().is(":first-child")){
+      loadPage(i-1);
+    }else if($a.parent().is(":last-child")){
+      loadPage(i+1);
+    }else
+      loadPage($a.html()-1);
+  }
+});    
+   
+    
+    
+
+  }
+
+})  

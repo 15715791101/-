@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RXO</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/common.css"/>
+    <style>
+        div.main_RXO{
+            width:100%;
+            height:580px;
+            position:relative;              
+        }
+        div.main_RXO video{
+            width:100%;
+            height:100%;
+            position: absolute;
+            top:0;
+            left:0;
+            z-index:-999;
+          
+        }
+        div.main_RXO  div.main_RXO_pic {
+            width:58.5%;
+            height:50%;
+            margin-top:220px;
+           
+        }
+        div.main_RXO  div.main_RXO_pic img.main_RXO_pic1{  
+           float: right;
+            display: block;  
+            cursor: pointer;
+           
+        }
+
+	</style>
+  </head>
+  
+  <body>
+      <div class="main_RXO">
+           <table></table>
+          <video src="img/main_RXO/video (1).mp4"  loop  id="main_RXO_video"></video>
+          <div class="main_RXO_pic">
+             
+              <img src="img/main_RXO/jiqi.png" alt="" class="main_RXO_pic1" id="main_RXO_pic1" onclick="playPause()">
+          </div>   
+      </div>
+  
+  <script src="jquery-3.2.1.js"></script>
+  <script>
+      var myVideo=document.getElementById("main_RXO_video");         
+       function playPause() {
+       if (myVideo.paused){
+           myVideo.play();
+      }
+       else{
+           myVideo.pause();
+}
+       }
+  </script>
+  
+  </body>
+
+</html>

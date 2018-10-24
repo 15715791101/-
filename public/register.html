@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .register{
+      margin: 0px auto;
+      width: 946px;
+      height: 584px;
+      border: 1px solid #CCCCCC;      
+      color: #333333;
+      font-size: 12px;  
+      position: relative;   
+    }
+    .register>img{
+      top:0px;
+      left:0px;
+      display: block;
+    }
+    .register .remind_info{
+      margin: 0 auto;
+      width: 900px;
+      border: 1px solid #FFBA55;
+      background: #FFFAEC;
+      margin-top:20px;
+      line-height: 30px;
+      height: 30px;
+    }
+    .register .register_info{
+       position:absolute;
+       top:160px;
+       left: 23px;
+       width:900px;
+       height:400px;
+       background:linear-gradient(to right ,#FFFEEE,#fff);
+    }
+
+    .register .register_info .table tr th{
+      padding-left: 10px;
+      width: 100px;
+      text-align: left;
+      background: #FFFEEE;
+      height:40px;
+    }
+    .register .register_info .table tr td{
+        width:200px;
+    }
+
+    #uname,#upwd,#reupwd,#email,#phone{
+      border: 1px solid #DFDFDF;
+      padding: 0 5px;
+      width: 200px;
+      height: 20px;
+      line-height: 20px;
+      color: #706F6D;
+      font-family: arial;
+    }
+    .register .register_info p{  
+       width:250px;
+       margin: 0 auto;
+    }
+
+    .register .register_info p input{
+        width:85px;
+        height:23px;
+        background-color:#7CC1EB;
+        border-radius: 5px;
+    }
+   
+ 
+  </style>  
+  <link rel="stylesheet" href="css/common.css"/>  
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="register">
+    <img src="img/register/mysony_reg2.jpg" alt="">
+    <div class="remind_info">
+      <p>请正确填写以下必填信息（如果你未满13周岁，请在你的父、母或监护人的陪同下填写）：</p>
+    </div>
+    <div class="register_info">
+      <table cellpadding="0" cellspacing="0" style="width:700px; margin: 0 auto;" class="table" >
+        <tr>
+           <th><span>*</span>用户名：</th>
+           <td><input type="text" name="uname" id="uname"></td>
+           <td>请输入正确的姓名，只能含有中文和英文。</td>
+        </tr>
+        <tr> 
+            <th><span>*</span>登录密码：</th>
+            <td><input type="password" name="upwd" id="upwd"></td>
+            <td> 密码可由8-40个字符组成，其中必须包括字母和数字。</td>
+        </tr>
+        <tr> 
+            <th><span>*</span>确认密码：</th>
+            <td><input type="password" name="reupwd" id="reupwd"></td>
+            <td>	请再次输入用户密码，并确保与以上所设密码一致。</td>
+        </tr>
+        <tr> 
+            <th><span>*</span>邮箱：</th>
+            <td><input type="email" name="email" id="email"></td>
+            <td>请正确填写Email地址，该Email可用于会员登录</td>
+        </tr>
+        <tr> 
+            <th><span>*</span>手机号：</th>
+            <td><input type="text"name="phone" id="phone" ></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><span>*</span>性别：</th>
+            <td> 
+                <input type="radio" name="man" id="sex1">男
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="women" id="sex0">女
+            </td>
+            <td></td>
+        </tr>  
+      </table>
+      <br/>
+      <p>
+      <input type="submit" value="提交注册信息" id="submit">
+      </p>
+
+
+    </div>
+     
+
+  </div>
+     
+
+
+    <br> <br> <br> <br> <br> <br> <br> <br> <br>
+ <script src="js/jquery-1.11.3.js"></script>
+<script></script>
+</body>
+</html>

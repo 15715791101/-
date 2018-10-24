@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+     .sony_photo .header{
+       width:100%;
+       height:72px;
+       background:#000;  
+     }
+     .sony_photo .sony_photo_carousel{
+         width:100%;
+         height:470px;
+         background: #AA9D9D; 
+         position: relative;   
+     }
+     .sony_photo_carousel_con{
+         width:100%;
+         margin:0 auto;   
+         overflow: hidden;
+     }
+     .sony_photo .sony_photo_carousel .caroursel{
+         width:100%;
+         margin:0 auto;
+       /* position: absolute;
+        left:251.5px;
+        top:20px;*/
+     }
+
+    .sony_photo  .nav_z{
+      background: #333;
+      height: 60px;
+      width: 100%;
+    }
+    .sony_photo  .nav_z  .nav_bgr{
+      margin-left:400px;
+    }
+    .sony_photo  .nav_z  .nav_bgr a:first-child{
+      display: block;
+      float: left;
+    }
+    .sony_photo  .nav_z  .nav_bgr a span{
+      display: block;
+      width: 202px;
+      height: 60px;
+      color: #FDFDFD;
+      text-align: center;
+      font-size: 20px;
+      line-height: 60px;
+      background: #333344;
+    }
+    .sony_photo  .nav_z  .nav_bgr a:last-child{
+      float:left;
+    }
+    .sony_photo  .content_swpabg{
+      font-family: "Microsoft YaHei","Arial","Hiragino Sans GB",sans-serif;
+      background: url(img/sonysheying/bg.jpg) repeat;
+      padding-bottom: 30px;  
+      width: 100%;
+      /*height:800px;*/
+    }
+    .sony_photo  .content_swpabg .content_item{
+       width:914px;
+       margin-top:20px;
+        height: 975px;
+      
+    }
+  
+   .sony_photo  .content_swpabg .content_item .changebox{
+      width: 926px;
+      margin: 40px 0;
+      height: 188px;  
+    }
+    .sony_photo  .content_swpabg .content_item .changebox .left,
+     .sony_photo  .content_swpabg .content_item .changebox .right{
+       box-sizing: border-box;
+       width: 50%;
+       float: left;
+       color:#fff;
+       height:170px;
+    }
+    .sony_photo  .content_swpabg .content_item .changebox .left{
+       position: relative;
+       background: #333;
+    }
+    .sony_photo  .content_swpabg .content_item .changebox .left .info{
+      padding: 39px 20px 60px 20px;
+      display: block;
+    }
+    .sony_photo  .content_swpabg .content_item .changebox .left .info p:first-child{
+       font-size: 20px;
+       color: #fff;
+    }
+    .sony_photo  .content_swpabg .content_item .changebox .left .info p:last-child{
+      color: #fff;
+      font-size:16px;
+    }
+
+    .sony_photo  .content_swpabg .content_item .changebox .left .img1{
+       position: absolute; 
+       left:462.5px;
+       top:46.5px;
+    }
+    .sony_photo  .content_swpabg .content_item .changebox .left .img2{
+       position: absolute; 
+       left:193px;
+       top:169px;
+    }
+    .sony_photo  .content_swpabg .content_item   .panel-body{
+       width: 100%;
+       height:250px;
+    }  
+
+    .sony_photo  .content_swpabg .content_item   .panel-body .maintitle{
+      color: #fed106;
+      font-size: 24px;
+      margin: 0 0 3% 0;
+   }
+   .sony_photo  .content_swpabg .content_item   .panel-body .mainlist {
+      width: 100%;
+      clear: both;
+      margin-left: 15px;
+   }
+   .sony_photo  .content_swpabg .content_item   .panel-body .mainlist li{
+       line-height: 30px;
+       font-size:18px;
+   }
+   .sony_photo  .content_swpabg .content_item   .panel-body .mainlist li span{
+    color: #fed106;    
+   }
+   .sony_photo .sony_photo_show .pic_banner{
+      height: 452px;
+      background: #2d2d2d;
+      margin-top:30px;
+  }
+  .sony_photo .sony_photo_show .pic_banner .left{
+      float: left;
+      width: 476px;
+  }
+  .sony_photo .sony_photo_show .pic_banner .right{
+     width: 474px;
+     float: right;
+  }
+
+  .sony_photo .sony_photo_show .pic_banner .left .title{
+     position: relative;
+     padding-top: 0px;
+     padding-bottom: 28px;
+  }
+  .sony_photo .sony_photo_show .pic_banner .left .title .a1{
+    position: absolute;
+    right: 9px;
+    top: 30px;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+  }
+ 
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l{
+     width: 100%;
+  }
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l ul{
+    width: 100%;
+  }
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l ul li{
+    width: 234px;
+    height: auto;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l ul li.last,
+  .sony_photo .sony_photo_show .pic_banner .right .pic_r ul li.last
+  {
+     margin-right: 0px;
+  }
+  /*遮罩位移之前的位置*/
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l ul li  .textbg{
+    background: url(img/sonysheying/show/textbg.png) repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 156px;
+    left: 0px;
+    transition: all 0.5s linear ;
+  }
+     .textbg_show{
+         top: 0px !important;
+     }
+
+
+
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l ul li  .textbg .p_box{
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial,'微软雅黑';
+  }
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l ul li  .textbg .p_box .ar1{
+    color: #b3b3b3;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 9px;
+  }
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l ul li  .textbg .p_box  .ar2{
+    width: 27px;
+    height: 3px;
+    background: #ffea00;
+    margin-bottom: 4px;
+  }
+  .sony_photo .sony_photo_show .pic_banner .left .pic_l ul li  .textbg .p_box  .ar3{
+    font-size: 16px;
+    color: #ffea00;
+    text-align: right;
+    display: block;
+    outline: 0 none;
+    float: right;
+    width: 70px;
+  }
+
+  .sony_photo .sony_photo_show .pic_banner .right .pic_r{
+    width: 474px;  
+  }
+  .pic_banner .right .pic_r ul{
+    width: 474px;  
+  }
+
+  .sony_photo .sony_photo_show .pic_banner .right .pic_r ul li{
+        width: 474px;
+        height: 452px;
+        margin-bottom: 0px;
+        position: relative;
+       overflow: hidden;
+      display: block;
+    }
+  /*遮罩之前的位置*/
+    .sony_photo .sony_photo_show .pic_banner .right .pic_r ul li .textbg2{
+     background: url(img/sonysheying/show/textbg.png) repeat;
+     width: 474px;
+     height: 452px;
+     position: absolute;
+     top: 452px;
+     left: 0px;
+     transition:all 0.8s linear;
+    }
+     .textbg2_show{
+         top: 0px !important;
+     }
+     .sony_photo .sony_photo_show .pic_banner .right .pic_r ul li a{
+         display: block;
+     }
+
+    .sony_photo .sony_photo_show .pic_banner .right .pic_r ul li .textbg2 .p_box{
+      padding-top: 30px;
+      padding-left: 40px;
+      padding-right: 10px;
+      font-family: Arial,'微软雅黑';
+    }
+
+    .textbg2 .p_box .ar1 {
+    color: #b3b3b3 ;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    }
+    .textbg2 .p_box .ar2{
+    width: 27px;
+    height: 3px;
+    background: #ffea00 ;
+    margin-bottom: 15px;
+   }
+   .textbg2 .p_box .ar3{
+    font-size: 16px;
+    color: #b3b3b3;
+    margin-bottom: 40px;
+   }
+   .sony_photo  .sony_photo_show{
+    background: url(img/sonysheying/bg.jpg) repeat;
+    height:1100px;
+   }
+    .sony_photo  .sony_race_prompt .sony_race_ad{
+        width:220px;
+        height:240px;
+        position: fixed;
+        left:-220px;
+        /*left:0px;*/
+        top:140px;
+        background-color:#fcbbbb;
+        opacity: 0.8;
+        transition:all 0.8s linear;
+     }
+     .sony_ad_active{
+         left:0px !important;
+     }
+
+     .sony_photo  .sony_race_prompt .sony_race_ad>a{
+         float:right;
+         padding:5px 10px;
+         border:1px solid black;
+         cursor:pointer;
+     }
+     .sony_photo  .sony_race_prompt .sony_race_ad .ad_info{
+         margin-top: 50px;
+     }
+     .sony_photo  .sony_race_prompt .sony_race_ad .ad_info p{
+         line-height: 20px;
+     }
+     .sony_photo  .sony_race_prompt .sony_race_ad .ad_info p span{
+          font-size:14px;
+     }
+
+      /*手风琴打开添加样式*/
+     .content_swpabg_changebox_show{
+         background: #C29525 !important;
+     }
+      .content_swpabg_sanjiao_img1{
+          display: none !important;
+      }
+     .content_swpabg_sanjiao_img2{
+         display:block !important ;
+     }
+     .panel-body-show{
+         display:block !important ;
+     }
+      .panel-body-none{
+          display:none !important;
+      }
+  </style>
+  <link rel="stylesheet" href="css/common.css"/>  
+  <link rel="stylesheet" href="css/carousel/carousel.css"/>  
+</head>
+<body>
+    <div class="sony_photo">
+        <div class="header">
+            <div class="w960">
+                <img src="img/wesheying/logo.jpg" alt="">
+            </div>
+        </div>
+        <div class="sony_photo_carousel">
+          <div class="sony_photo_carousel_con"> 
+            <div class = "caroursel poster-main" data-setting = '{
+              "width":1400,
+              "height":450,
+              "posterWidth":800,
+              "posterHeight":450,
+              "scale":0.8,
+              "dealy":"2000",
+              "algin":"middle"
+            }'>
+              <ul class = "poster-list">
+                <li class = "poster-item"><img src="img/sonysheying/carousel/1.jpg" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="img/sonysheying/carousel/2.png" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="img/sonysheying/carousel/3.png" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="img/sonysheying/carousel/4.png" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="img/sonysheying/carousel/5.png" width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="img/sonysheying/carousel/1.jpg"  width = "100%" height="100%"></li>
+                <li class = "poster-item"><img src="img/sonysheying/carousel/2.png"  width = "100%" height="100%"></li>
+              </ul>
+              <div class = "poster-btn poster-prev-btn"></div>
+              <div class = "poster-btn poster-next-btn"></div>
+            </div>
+          </div>   
+        </div>
+        <div class="nav_z w960">
+           <div class="nav_bgr w960">
+              <a href=""><span>sony &nbsp;赛事</span></a>
+              <a href=""><span>赛事说明</span></a>
+           </div>
+        </div>
+        <div class="content_swpabg">
+           <div class="w960">
+              <table></table>
+              <div class="content_item">
+                 <table></table>
+                 <div class="box">
+                      <div class="changebox ">
+                          <div class="left content_swpabg_changebox_show ">
+                              <a href="" class="info ">
+                                  <p>关于比赛</p>
+                                  <p>全球最多元化的摄影比赛之一</p>
+                              </a>
+                              <img src="img/sonysheying/jiao2.png" alt="" class="img1 content_swpabg_sanjiao_img1" >
+                              <img src="img/sonysheying/jiao1.png" alt="" class="img2 content_swpabg_sanjiao_img2" style="display: none">
+                          </div>
+                          <div class="right ">
+                              <img src="img/sonysheying/img2.jpg" alt="">
+                          </div>
+                      </div>
+                      <div class="panel-body panel-body-show" style="display: none" >
+                          <div class="maintitle"><h2>索尼世界摄影大赛共分四个组别</h2></div>
+                          <div class="mainlist">
+                              <ul>
+                                  <li> <span>Professional</span>- 专业组——表彰杰出的一组作品 </li>
+                                  <br>
+                                  <li> <span>Open</span>- 公开组——奖励全球最佳单幅作品 </li>
+                                  <br>
+                                  <li> <span>Youth</span>- 青少年组——奖励12-19岁摄影师的最佳单幅作品 </li>
+                                  <br>
+                                  <li> <span>Student</span>- 学生组——适合世界各地的摄影专业学生参与 </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                 <div class="box">
+                    <div class="changebox">
+                       <div class="left ">
+                          <a href="" class="info">
+                              <p>比赛</p>
+                              <p>找到合适您的比赛</p>
+                          </a>
+                          <img src="img/sonysheying/jiao2.png" alt="" class="img1">
+                          <img src="img/sonysheying/jiao1.png" alt="" class="img2" style="display: none">
+                       </div>
+                       <div class="right ">
+                          <img src="img/sonysheying/img1.jpg" alt="">
+                       </div>
+                    </div>
+                    <div class="panel-body" style="display:none" >
+                        <div class="maintitle"><h2></h2></div>
+                        <div class="mainlist">
+                          <ul>
+                            <li> <span>索尼世界摄影大赛是全球著名的、最多元化的摄影比赛之一。今年迎来第12年，我们的目标是展示全球最好的当代摄影作品。</span> </li>
+                            <li> 大赛免费接受报名，开放给所有级别的摄影师竞逐奖项，从12-19岁的新手、摄影爱好者和学生到专业摄影人士都可以参加。大赛涵盖建筑、纪实、风光、人像、体育、街拍、野生动物、旅行、文化等多个类别，为每个人提供了机会。</li>
+                              <br>
+                            <li> 所有作品都由每年聚集在伦敦的摄影界专家进行评选，以选出最佳照片。获奖摄影师分享总额 达30,000美元的奖金以及索尼数码影像设备新品。 </li>
+                          </ul>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="box">
+                    <div class="changebox">
+                        <div class="left ">
+                           <a href="" class="info">
+                              <p>索尼的承诺</p>
+                              <p></p>
+                           </a>
+                           <img src="img/sonysheying/jiao2.png" alt="" class="img1">
+                           <img src="img/sonysheying/jiao1.png" alt="" class="img2" style="display: none">
+                        </div>
+                        <div class="right">
+                           <img src="img/sonysheying/img4.jpg" alt="">
+                        </div>
+                     </div>
+                    <div class="panel-body" style="display:none">
+                         <div class="maintitle"><h2>索尼世界摄影大赛的目标是为摄影文化的持续发展建立一个平台</h2></div>
+                         <div class="mainlist">
+                             <ul>
+                                 <li> 每年春季，备受瞩目的索尼世界摄影大赛作品展览在伦敦闻名于世的地标萨默塞特宫举办，展出杰出的获奖和入围作品。该展览已成为伦敦文化日程中不容错过的盛会，每年吸引超过30,000名参观者，上百幅照片在这座宏伟建筑的东西两翼展出。 </li>
+                                 <li><span>展览</span></li>
+                                 <li>能够得到如此知名组织、评委以及摄影界的认可，对我本人以及我的专业水平发展都意义非凡。”<span> —— 苏菲·格曼德（Sophie Gaman，2014 年索尼世界摄影大赛专业组人像摄影类获奖者 </span></li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+              </div>
+           </div>
+           <div style="clear: both;"></div>
+        </div>
+        <div class="nav_z ">
+            <div class="nav_bgr w960">
+                <a href=""><span>sony &nbsp;摄影 </span></a>
+                <a href=""><span>作品赏析</span></a>
+            </div>
+        </div>
+        <div class="sony_photo_show">
+           <div class="w960">
+                <table></table>
+              <div class="pic_banner clearfix" >               
+                  <div class="left clearfix">
+                      <div class="title">
+                         <img src="img/sonysheying/show/title2.jpg" alt="">
+                         <a href="" class="a1">获奖作品视频赏析 ></a>                      
+                      </div>
+                      <div class="pic_l">
+                         <ul>
+                            <li >
+                              <a href=""><img src="img/sonysheying/show/v2.jpg" alt=""></a>
+                              <div class="textbg">
+                                 <div class="p_box">
+                                    <div class="ar1">Italy</div>
+                                    <div class="ar2"></div>
+                                    <a href="" class="ar3">查看大图</a>
+                                 </div>                               
+                              </div>
+                            </li>
+                            <li class="last">
+                                <a href=""><img src="img/sonysheying/show/v3.jpg" alt=""></a>
+                                <div class="textbg">
+                                   <div class="p_box">
+                                      <div class="ar1">Italy</div>
+                                      <div class="ar2"></div>
+                                      <a href="" class="ar3">查看大图</a>
+                                   </div>                               
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img src="img/sonysheying/show/v4.jpg" alt=""></a>
+                                <div class="textbg">
+                                   <div class="p_box">
+                                      <div class="ar1">Italy</div>
+                                      <div class="ar2"></div>
+                                      <a href="" class="ar3">查看大图</a>
+                                   </div>                               
+                                </div>
+                            </li>
+                            <li class="last">
+                                <a href=""><img src="img/sonysheying/show/v5.jpg" alt=""></a>
+                                <div class="textbg">
+                                   <div class="p_box">
+                                      <div class="ar1">Italy</div>
+                                      <div class="ar2"></div>
+                                      <a href="" class="ar3">查看大图</a>
+                                   </div>                               
+                                </div>
+                            </li>
+
+                         </ul>
+                      </div>
+                  </div>
+                  <div class="right clearfix">
+                       <div class="pic_r">
+                         <ul>
+                           <li class="last">
+                             <a href=""><img src="img/sonysheying/show/v1.jpg" alt=""></a>
+                             <div class="textbg2">
+                                <div class="p_box">
+                                    <div class="ar1">Italy</div>
+                                    <div class="ar2"></div>
+                                    <br>
+                                    <a href="" class="ar3">查看大图</a>
+                                 </div>                              
+                             </div>
+
+                           </li>
+                         </ul>
+                          
+                       </div>
+                  </div>
+
+              </div>
+               <br>
+              <div class="pic_banner clearfix" >
+                   <div class="left clearfix" style="float: right">
+                       <div class="title">
+                           <img src="img/sonysheying/show/title3.jpg" alt="">
+                           <a href="" class="a1">获奖作品视频赏析 ></a>
+                       </div>
+                       <div class="pic_l">
+                           <ul>
+                               <li >
+                                   <a href=""><img src="img/sonysheying/show/m2.jpg" alt=""></a>
+                                   <div class="textbg">
+                                       <div class="p_box">
+                                           <div class="ar1">Italy</div>
+                                           <div class="ar2"></div>
+                                           <a href="" class="ar3">查看大图</a>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="last">
+                                   <a href=""><img src="img/sonysheying/show/m3.jpg" alt=""></a>
+                                   <div class="textbg">
+                                       <div class="p_box">
+                                           <div class="ar1">Italy</div>
+                                           <div class="ar2"></div>
+                                           <a href="" class="ar3">查看大图</a>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li>
+                                   <a href=""><img src="img/sonysheying/show/m4.jpg" alt=""></a>
+                                   <div class="textbg">
+                                       <div class="p_box">
+                                           <div class="ar1">Italy</div>
+                                           <div class="ar2"></div>
+                                           <a href="" class="ar3">查看大图</a>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="last">
+                                   <a href=""><img src="img/sonysheying/show/m5.jpg" alt=""></a>
+                                   <div class="textbg">
+                                       <div class="p_box">
+                                           <div class="ar1">Italy</div>
+                                           <div class="ar2"></div>
+                                           <a href="" class="ar3">查看大图</a>
+                                       </div>
+                                   </div>
+                               </li>
+
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="right clearfix" style="float:left">
+                       <div class="pic_r">
+                           <ul>
+                               <li class="last">
+                                   <a href=""><img src="img/sonysheying/show/m1.jpg" alt=""></a>
+                                   <div class="textbg2">
+                                       <div class="p_box">
+                                           <div class="ar1">Italy</div>
+                                           <div class="ar2"></div>
+                                           <br>
+                                           <a href="" class="ar3">查看大图</a>
+                                       </div>
+                                   </div>
+
+                               </li>
+                           </ul>
+
+                       </div>
+                   </div>
+               </div>
+
+           </div>
+
+        </div>        
+        <div class="sony_race_prompt">
+             <div class="sony_race_ad">
+                 <a>X</a>
+                 <div class="ad_info">
+                    <p><span>2018年10月1日</span><br>国家地区摄影专项奖截止投稿</p>
+                     <br>
+                    <p><span>2018年11月1日</span><br>开始2018年索尼世界摄影大赛获奖作品展将在伦敦萨默赛特宫举行</p>
+                 </div>
+             </div>
+        </div>
+    </div>   
+   
+
+ <script src="js/jquery-1.11.3.js"></script>
+ <script src="js/carousel/jquery.carousel.js"></script>
+ <script src="js/carousel/jquery.min.js"></script>
+<script>
+     Caroursel.init($('.caroursel'));
+     /*小广告*/
+   $(document).ready(function(){
+       var $ad=$("div.sony_race_prompt>div.sony_race_ad");
+      // console.log($ad);
+       $ad.addClass("sony_ad_active");
+       var $btn=$("div.sony_race_prompt>div.sony_race_ad>a");
+       $btn.click(function(){
+           $ad.removeClass("sony_ad_active");
+           setTimeout( function(){
+               $ad.addClass("sony_ad_active");
+           },3000);
+       });
+   });
+
+    /*比赛说明*/
+    var $item=$("div.content_item>div.box>div.changebox>div.left");
+    /*console.log($item);*/
+
+     $item.each(function(i,it){
+         $(this).mouseenter(function(){
+             var  $itOpen=$("div.box>div.changebox>div.content_swpabg_changebox_show");
+             console.log( $itOpen);
+              if( $itOpen.length>0){
+                 $itOpen.removeClass("content_swpabg_changebox_show");
+                 $itOpen.children().eq("1").removeClass("content_swpabg_sanjiao_img1");
+                 $itOpen.children().eq("2").removeClass("content_swpabg_sanjiao_img2");    
+                 $itOpen.parent().next().removeClass("panel-body-show");
+
+                  $(this).addClass("content_swpabg_changebox_show");
+             }
+             var $showIfo=$(this).parent().next();
+             if($(this).hasClass("content_swpabg_changebox_show")){
+                 $(this).children().eq("1").addClass("content_swpabg_sanjiao_img1");
+                 $(this).children().eq("2").addClass("content_swpabg_sanjiao_img2");
+                 $showIfo.addClass("panel-body-show");
+             }
+         });
+   });
+
+/*图片展示的遮罩层*/
+     $("div.pic_banner>div.left>div.pic_l>ul>li").mouseenter(function(){
+         var $tar=$(this);
+         $tar.children().eq(1).addClass("textbg_show");
+     });
+
+     $("div.pic_banner>div.left>div.pic_l>ul>li>div.textbg").mouseleave(function(){
+         var $tar=$(this);
+         $tar.removeClass("textbg_show");
+     });
+
+
+
+     $("div.pic_banner>div.right>div.pic_r>ul>li").mouseenter(function(){
+         var $trr=$(this);
+         $trr.children().eq(1).addClass("textbg2_show");
+     });
+
+     $("div.pic_banner>div.right>div.pic_r>ul>li>div.textbg2").mouseleave(function(){
+         var $trr=$(this);
+         $trr.removeClass("textbg2_show");
+     });
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

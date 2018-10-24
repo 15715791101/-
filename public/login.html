@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .login_form{
+      margin: 0px auto;
+      width: 946px;
+      height: 584px;
+      background: url(img/login/loginlogon_07.jpg) left top no-repeat;
+      border: 1px solid #CCCCCC;
+      border-top: none;
+      color: #333333;
+      font-size: 12px;  
+      position: relative;   
+    }
+    .login_form .info_c{
+      position:absolute;
+      width:630px;
+      height:300px;
+      top:130px;
+      left:155px;
+
+    }
+    .login_form .info_c .showInfo{
+      margin: 5px auto;
+      width: 550px;
+      border: 1px solid #FFBA55;
+      background: #FFFAEC;
+      padding-left: 20px;
+      line-height: 30px;
+      height: 30px;
+    }
+    .login_form .info_c  p.un{
+       margin-top:40px;
+       margin-left:110px;
+       font-size: 14px;
+    }
+    .login_form .info_c  p.pa{
+      margin-top:16px;
+       margin-left:120px;
+       font-size: 14px;
+    } 
+    .login_form .info_c  p input{
+      width: 150px;
+      height: 20px;
+      border: 1px solid #E0E0E0;
+      line-height: 20px;
+    }
+    .login_form .info_c  p.ch{
+       font:12px;
+       color: #868686;
+       margin-top:8px;   
+    }
+    .login_form .info_c p.ch input{
+       width:13px;
+       height:13px;
+        margin-left:40px;
+       
+    }
+    .login_form .info_c p.sub input{
+        width:70px;
+        height:23px;
+        background-color:#5CADFE;
+        border-radius: 5px;
+        margin-left: 208px;
+    }
+    .login_form .remind{
+        width:526px;
+        height:44px;
+        border-bottom:1px dashed #000000 ;
+        border-top:1px dashed #000000 ;
+        line-height: 44px;
+        margin-top:30px;
+    }
+
+
+  </style>  
+  <link rel="stylesheet" href="css/common.css"/>  
+</head>
+<body>
+ <div  class="login_form">
+    <div class="info_c">
+        <div class="showInfo"> <span  id="showMsg"></span> &nbsp; &nbsp; &nbsp;<span id="showIn"></span></div>
+        <form action="" method="get">
+          <p class="un">
+           用户名：<input type="text" name="uname" id="uname" onfocus="btn_focus()" onblur="btn_blur()">
+          </p>
+          <p class="pa">
+          密码： <input type="password" name="upwd" id="upwd" onfocus="upwd_focus()" onblur="upwd_blur()">
+          </p>
+          <p class="ch">
+           <input type="checkbox" class="check">六个月轻松登录
+          </p>
+          <p class="sub">
+            <input type="submit" name="submit" value="确定" id="submit" >
+          </p>
+       </form>
+        <div class="remind">
+            <img src="img/login/loginlogon_13.jpg" alt=""/> <span class="remind_info">如果您的用户名和密码无法登录，请联系索尼中国顾客咨询热线进行查询。</span>
+        </div>
+    </div>
+
+  </div>
+    <br> <br> <br> <br>
+
+ <script src="js/jquery-1.11.3.js"></script>
+ <script src="js/login.js"></script>
+<script>
+  function $(id){
+  return document.getElementById(id);
+}
+var form=document.forms[0];
+var txtName=form.uname;
+var txtPwd=form.upwd;
+console.log(txtName);
+
+ function btn_focus(){
+        $("showMsg").innerHTML="请输入用户名为6个字符以内的字母、数字或下划线的组合!";
+      }
+
+  function btn_blur(){
+        //获取input输入框中的值
+    
+        var uname=$("uname").value;
+        if(uname==""){
+           $("showMsg").innerHTML="用户名不能为空！";
+        }
+      }    
+     
+      function upwd_focus(){
+        $("showIn").innerHTML="请输入6位数字用户密码！";
+     }
+     function upwd_blur(){
+    
+       var upwd=$("upwd").value;
+       if(upwd==""){
+         $("showIn").innerHTML="用户密码不能为空！";
+       }
+     }
+
+form.onsubmit=function(e){ 
+  var reg1=/^\w{1,6}$/;
+  var reg2=/^\d{6}$/;     
+  var un=reg1.test($("uname").value);
+  var pn=reg2.test($("upwd").value);
+  if(!(un&&pn))
+    e.preventDefault();
+}
+
+</script>
+
+</body>
+</html>

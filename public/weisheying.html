@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+     .black_card .header{
+       width:100%;
+       height:72px;
+       background:#000;          
+     }
+     
+     .black_card .header .black_card_logo{
+       height:100%;
+     }
+    .black_card .header .black_card_logo img:first-child{
+        display:inline-block;
+        float:left;      
+    }
+
+    .black_card .header .black_card_logo img:last-child{
+      display:inline-block;
+        float:right;
+        margin-top:20px;     
+    }
+    .black_card  .page{
+      width:100%;
+      height:1000px;
+      overflow: hidden;
+      position: relative;
+      font-family: "Microsoft YaHei";
+      font-size: 16px;
+      line-height: 24px;
+    }
+     .black_card  .page .cover{
+         width:100%;
+         height:1000px;
+         position: absolute;
+         top:0;
+         left:0;
+         background:rgb(0,0,0);
+         opacity:0.5 ;
+         z-index:9;
+     }
+
+    .black_card  .page .p_list{
+      position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+    }
+
+    .black_card  .page .p_list  img{
+      position:absolute; top:0; left:0;
+      opacity:1;
+      transition:all 3s linear;       
+    }
+   .Img_show{
+      transform:scale(1.2,1.2);
+      opacity:0.6;
+      z-index:8;
+    }
+
+
+     .black_card  .page .p_icon1{
+     position: absolute;
+     width: 27%;
+     left: 36.5%;
+     top: 8%;
+     z-index: 10;
+     }
+
+     .black_card  .page  .p_tabbox{
+         position: absolute;
+         width: 84.58%;
+         left: 7.79%;
+         top: 45%;
+         overflow: hidden;
+         z-index: 11;
+     }
+     .black_card  .page  .p_tabbox li{
+         width: 24%;
+         float: left;
+         margin: 0 0.4%;
+         position: relative;
+         border-bottom: solid 1px #cb0202;
+         cursor: pointer;
+         height:460px;
+     }
+
+     .black_card  .page  .p_tabbox li img{
+         width: 100%;
+         display: block;
+         position: relative;
+     }
+     .black_card  .page  .p_tabbox  li .p_fc2{
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         left: 0;
+         bottom: 0;
+         background-image: url(img/wesheying/heika_tab_jt01.png);
+         background-repeat: no-repeat;
+         background-position: 0 bottom;
+     }
+
+     .black_card  .page  .p_tabbox  li.p_tab .p_t1{
+         position: absolute;
+         width: 33.33%;
+         right: 3%;
+         bottom: 2%;
+     }
+     .black_card  .page  .p_tabbox  li.p_tab .p_infor{
+         color:#fff;
+         position: absolute;
+        left: 3%;
+         bottom: 2%;
+         width:60%;
+         height:75px;
+     }
+     .black_card  .page  .p_tabbox  li.p_tab .p_infor p:nth-child(2){
+         font-size:20px ;
+     }
+     .black_card  .page  .p_tabbox  li.p_tab .p_infor p span{
+         font-size:12px;
+     }
+
+  </style>
+  <link rel="stylesheet" href="css/common.css"/>  
+</head>
+<body>
+    <div class="black_card">
+        <div class="header">
+          <div class="w960 black_card_logo">
+              <img src="img/wesheying/logo.jpg" alt="">
+              <img src="img/wesheying/wlogo.jpg" alt="">
+          </div>
+        </div>
+        <div class="page">
+            <div class="p_list">
+               <img src="img/wesheying/heika_tab1.jpg" alt="" class="Img_show">
+               <img src="img/wesheying/heika_tab2.jpg" alt="">
+               <img src="img/wesheying/heika_tab3.jpg" alt="">
+               <img src="img/wesheying/heika_tab4.jpg" alt="">
+            </div>
+            <div class="cover"></div>
+            <div class="p_icon1"><img src="img/wesheying/heika_icon.png" alt=""/></div>
+            <div class="p_tabbox">
+                <ul>
+                    <li class="p_tab">
+                        <div><img src="img/wesheying/1.png" alt=""/></div>
+                        <div class="p_fc2"><span></span></div>
+                        <div class="p_t1">
+                            <img src="img/wesheying/heika_tab_t2.png" alt=""/>
+                        </div>
+                        <div class="p_infor">
+                            <p>黑卡®RX100系列</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX100<span>V</span></p>
+                            <p>速度大师</p>
+                        </div>
+                    </li>
+                    <li class="p_tab">
+                        <div><img src="img/wesheying/2.png" alt=""/></div>
+                        <div class="p_fc2"><span></span></div>
+                        <div class="p_t1">
+                            <img src="img/wesheying/cp_rx10m4_2.png" alt=""/>
+                        </div>
+                        <div class="p_infor">
+                            <p>超长焦黑卡®</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX10<span>Ⅳ</span></p>
+                            <p>遥.可及</p>
+
+                        </div>
+                    </li>
+                    <li class="p_tab">
+                        <div><img src="img/wesheying/4.png" alt=""/></div>
+                        <div class="p_fc2"><span></span></div>
+                        <div class="p_t1">
+                            <img src="img/wesheying/heika_tab_t1.png" alt=""/>
+                        </div>
+                        <div class="p_infor">
+                            <p>索尼黑卡®</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX1<span>RII</span></p>
+                            <p>袖珍的品位</p>
+                        </div>
+                    </li>
+                    <li class="p_tab">
+                        <div><img src="img/wesheying/3.png" alt=""/></div>
+                        <div class="p_fc2"><span></span></div>
+                        <div class="p_t1">
+                            <img src="img/wesheying/cp_rx10m3_2.png" alt=""/>
+                        </div>
+                        <div class="p_infor">
+                            <p>超长焦黑卡®</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX10<span>III</span></p>
+                            <p>遥.可及</p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+   
+
+    <script src="js/jquery-1.11.3.js"></script>
+<script>
+    //背景图片切换
+   (function(){
+      function Mimg(){
+        var $imgShow=$("div.p_list>img.Img_show");
+        //console.log($("div.p_list>img.Img_show"));
+        $imgShow.removeClass("Img_show");
+        //console.log($imgShow.next());
+        if($imgShow.next().length>0)
+          $imgShow.next().addClass("Img_show");
+        else
+       $imgShow.parent().children(":first-child").addClass("Img_show");
+           // $imgShow.parent().children().eq(0).addClass("Img_show");
+
+      }
+      var timer=setInterval(Mimg,4000);
+
+   })();
+
+
+
+    $(document).ready(function() {
+        $("div.p_icon1>img").hide().fadeIn(5000);
+        $("li.p_tab").hide().fadeIn(5000);
+    });
+
+
+
+
+</script>
+
+
+</body>
+</html>

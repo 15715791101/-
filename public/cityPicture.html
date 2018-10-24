@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+      .City_picture{
+          background:#F0F0F0;
+      }
+       .City_picture .header{
+       width:100%;
+       height:70px;
+       background:#000;          
+     }
+     
+     .City_picture .header .City_picture_logo{
+       height:100%;
+       width:1450px;
+       margin: 0 auto;
+       
+     }
+     .City_picture .header .City_picture_logo img:first-child{
+        display:inline-block;
+        float:left;      
+    }
+
+    .City_picture .header .City_picture_logo img:last-child{
+      display:inline-block;
+        float:right;   
+
+    }
+    .City_picture .header .City_picture_logo .header_title{
+        width:360px;
+        height:100%;
+        float: left;
+        margin-left:400px;
+        line-height:100%;
+   
+    }
+    .City_picture .header .City_picture_logo .header_title a {
+        display: inline-block;
+        float: left;
+        margin-left:20px;
+        font-size:16px;
+        width:70px;
+       height: 70px;
+       color: #ffffff;
+       line-height: 70px;
+       text-align: center;
+       /*margin-top:3px;
+*/       
+
+    }
+    .City_picture .header .City_picture_logo .header_title a:hover{
+        background: #ad0000;
+    }
+  
+    .City_picture .main_picture{
+        width:100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .City_picture .main_picture img{
+        width:100%;
+        display: block;
+    }
+    .City_picture .main_nav{
+       width: 100%;
+       border-top: 5px solid #02ccff;
+       height: 62px;
+       background: url(img/city_picture/nbg.png) repeat-x;
+    }
+    .City_picture .main_nav .main_nav_md{
+        width: 960px;
+        margin: 0 auto;
+    }
+    .City_picture .main_nav .main_nav_md li{
+        display: block;
+        float: left;        
+    }
+    .City_picture .main_nav .main_nav_md li a{
+        width: 320px;
+        height: 60px;
+       text-align: center;
+       line-height: 53px;
+       display: block;
+
+    }
+    .City_picture .mainwrap1 img{
+        width:100%;
+    }
+   .City_picture .mainwrap2 .show_title{
+       height:74px;
+   }
+   .City_picture .mainwrap2 .picture_box{
+     overflow: hidden;
+     padding-bottom: 30px;
+   }
+   .City_picture .mainwrap2 .picture_box .box_list{
+       width:980px;
+       overflow: hidden;
+   } 
+   .City_picture .mainwrap2 .picture_box .box_list  li{
+       width:310px;   
+       height: 271px;
+       float: left;
+       background: #ffffff;
+       margin: 10px 12px 0 0;
+       position: relative;
+       border: 1px solid #000000;
+       overflow: hidden;     
+      }
+      .City_picture .mainwrap2 .picture_box .box_list  li a>img{            
+        height: 201px;
+        display: block;
+        width: auto;
+        margin: 0 auto;
+    } 
+    .City_picture .mainwrap2 .picture_box .box_list  li .trigon_cons{
+       width: 29px;
+       height: 16px;
+       position: absolute;
+       top: 186px;
+       left: 12px;
+    }
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont{
+        width:310px;
+        height:70px;
+        float: left;
+        overflow: hidden;
+        border-top: 1px solid #d4d4d4;
+    }
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left{
+        width:310px;
+        height:70px;
+        
+    }
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p1{
+        width: 310px;
+        height: 36px;
+        line-height: 36px;
+        color: #000000;
+        padding-left: 10px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p1 span:first-child{
+        margin-right: 110px;     
+    }
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p1 span.s2{
+        margin-right:2px;
+    }
+  
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p1 span.s2,
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p1 span.s3{
+        font-size: 12px;    
+        font-weight: normal;
+        display: inline-block;
+        width:35px;
+        height:12px;
+        color: #999999;      
+    }
+
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p2{
+        width:310px;
+        height: 18px;
+        line-height: 18px;
+        color: #000000;
+        padding-left: 10px;
+        font-size: 12px;
+        overflow: hidden;  
+    }
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p2 img{
+        width:18px;
+        height:18px;
+        float: left;
+        margin-right: 4px;
+    }
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p2 .w1{
+        width:90px;
+        padding:0 6px 0 0 ;
+        float: left;
+    }
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p2 .w2{
+        width:75px;
+        padding:0 8px 0 0 ;
+        float: left;
+    }
+
+    .City_picture .mainwrap2 .picture_box .box_list  li div.foot_cont .left .p2 a.g1{
+        margin-left:20px;
+        font-size: 12px;    
+        font-weight: normal;
+        display: inline-block;
+        width:35px;           
+    }
+  
+   .City_picture .mainwrap3 h2{
+         padding-left: 30px;
+         font-size: 24px;
+         font-weight: normal;
+         color: #000;
+         margin: 20px 0;
+   }
+      .nav_active{
+          background: #02ccff;
+      }
+
+      .content_active{
+          display: block !important;
+      }
+      .City_picture .mainwrap2,  .City_picture .mainwrap1, .City_picture .mainwrap3{
+          display: none;
+      }
+  </style>
+  <link rel="stylesheet" href="css/common.css"/>  
+</head>
+<body>
+    <div class="City_picture">
+        <div class="header">
+          <div class=" City_picture_logo">
+              <img src="img/city_picture/logo.jpg" alt="">
+              <div class="header_title">
+                 <a href=""><img src="img/city_picture/home.jpg" alt=""></a>
+                 <a href="">学</a>
+                 <a href="">赏</a>
+                 <a href="">赛</a>
+              </div>
+              <img src="img/city_picture/acafelogo.jpg" alt="">
+          </div>
+        </div>
+        <div class="main_picture">
+             <img src="img/city_picture/v1.jpg" alt="">
+        </div>
+        <div class="main_nav">
+            <div class="main_nav_md">
+                <ul>
+                    <li><a href="#city_content1" data-toggle="tab" class="nav_active">作品展示</a></li>
+                    <li><a href="#city_content2" data-toggle="tab">活动信息</a></li>
+                    <li><a href="#city_content3" data-toggle="tab">比赛奖项</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main_wrap" >
+           <div class="mainwrap2 w960 content_active"  id="city_content1">
+            <div class="show_title w960 ">
+                <img src="img/city_picture/cansai_title.png" alt="">
+            </div>
+            <div class="picture_count w960">  
+                <div class="picture_box">
+                    <ul class="box_list">
+                        <li>
+                            <a href=""><img src="img/city_picture/1.jpg" alt=""></a>
+                            <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                            <div class="foot_cont">
+                                <div class="left">
+                                    <P class="p1">
+                                        <span class="s1">巴黎(ILCE-7RM3)</span>
+                                        <span class="s2">0</span>
+                                        <span class="s3">0</span>
+                                    </P>                                  
+                                    <P class="p2">
+                                        <img src="img/city_picture/con1.jpg" alt="">
+                                        <span class="w1">HERRZHAO</span>
+                                        <img src="img/city_picture/con2.jpg" alt="">
+                                        <span class="w2">2018.09.07</span>  
+                                        <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                        <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                    </P>
+                                </div>   
+                            </div>
+                        </li>
+                        <li>
+                                <a href=""><img src="img/city_picture/2.jpg" alt=""></a>
+                                <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                                <div class="foot_cont">
+                                    <div class="left">
+                                        <P class="p1">
+                                            <span class="s1">巴黎(ILCE-7RM3)</span>
+                                            <span class="s2">0</span>
+                                            <span class="s3">0</span>
+                                        </P>                                  
+                                        <P class="p2">
+                                            <img src="img/city_picture/con1.jpg" alt="">
+                                            <span class="w1">HERRZHAO</span>
+                                            <img src="img/city_picture/con2.jpg" alt="">
+                                            <span class="w2">2018.09.07</span>  
+                                            <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                            <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                        </P>
+                                    </div>   
+                                </div>
+                            </li>
+                            <li>
+                                    <a href=""><img src="img/city_picture/3.jpg" alt=""></a>
+                                    <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                                    <div class="foot_cont">
+                                        <div class="left">
+                                            <P class="p1">
+                                                <span class="s1">巴黎(ILCE-7RM3)</span>
+                                                <span class="s2">0</span>
+                                                <span class="s3">0</span>
+                                            </P>                                  
+                                            <P class="p2">
+                                                <img src="img/city_picture/con1.jpg" alt="">
+                                                <span class="w1">HERRZHAO</span>
+                                                <img src="img/city_picture/con2.jpg" alt="">
+                                                <span class="w2">2018.09.07</span>  
+                                                <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                                <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                            </P>
+                                        </div>   
+                                    </div>
+                                </li>
+                                <li>
+                                        <a href=""><img src="img/city_picture/4.jpg" alt=""></a>
+                                        <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                                        <div class="foot_cont">
+                                            <div class="left">
+                                                <P class="p1">
+                                                    <span class="s1">巴黎(ILCE-7RM3)</span>
+                                                    <span class="s2">0</span>
+                                                    <span class="s3">0</span>
+                                                </P>                                  
+                                                <P class="p2">
+                                                    <img src="img/city_picture/con1.jpg" alt="">
+                                                    <span class="w1">HERRZHAO</span>
+                                                    <img src="img/city_picture/con2.jpg" alt="">
+                                                    <span class="w2">2018.09.07</span>  
+                                                    <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                                    <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                                </P>
+                                            </div>   
+                                        </div>
+                                    </li>
+                                <li>
+                                            <a href=""><img src="img/city_picture/5.jpg" alt=""></a>
+                                            <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                                            <div class="foot_cont">
+                                                <div class="left">
+                                                    <P class="p1">
+                                                        <span class="s1">巴黎(ILCE-7RM3)</span>
+                                                        <span class="s2">0</span>
+                                                        <span class="s3">0</span>
+                                                    </P>                                  
+                                                    <P class="p2">
+                                                        <img src="img/city_picture/con1.jpg" alt="">
+                                                        <span class="w1">HERRZHAO</span>
+                                                        <img src="img/city_picture/con2.jpg" alt="">
+                                                        <span class="w2">2018.09.07</span>  
+                                                        <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                                        <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                                    </P>
+                                                </div>   
+                                            </div>
+                                 </li>
+                                        <li>
+                                                <a href=""><img src="img/city_picture/6.jpg" alt=""></a>
+                                                <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                                                <div class="foot_cont">
+                                                    <div class="left">
+                                                        <P class="p1">
+                                                            <span class="s1">巴黎(ILCE-7RM3)</span>
+                                                            <span class="s2">0</span>
+                                                            <span class="s3">0</span>
+                                                        </P>                                  
+                                                        <P class="p2">
+                                                            <img src="img/city_picture/con1.jpg" alt="">
+                                                            <span class="w1">HERRZHAO</span>
+                                                            <img src="img/city_picture/con2.jpg" alt="">
+                                                            <span class="w2">2018.09.07</span>  
+                                                            <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                                            <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                                        </P>
+                                                    </div>   
+                                                </div>
+                                            </li>
+                                            <li>
+                                                    <a href=""><img src="img/city_picture/7.jpg" alt=""></a>
+                                                    <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                                                    <div class="foot_cont">
+                                                        <div class="left">
+                                                            <P class="p1">
+                                                                <span class="s1">巴黎(ILCE-7RM3)</span>
+                                                                <span class="s2">0</span>
+                                                                <span class="s3">0</span>
+                                                            </P>                                  
+                                                            <P class="p2">
+                                                                <img src="img/city_picture/con1.jpg" alt="">
+                                                                <span class="w1">HERRZHAO</span>
+                                                                <img src="img/city_picture/con2.jpg" alt="">
+                                                                <span class="w2">2018.09.07</span>  
+                                                                <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                                                <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                                            </P>
+                                                        </div>   
+                                                    </div>
+                                            </li>
+                                            <li>
+                                                        <a href=""><img src="img/city_picture/8.jpg" alt=""></a>
+                                                        <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                                                        <div class="foot_cont">
+                                                            <div class="left">
+                                                                <P class="p1">
+                                                                    <span class="s1">巴黎(ILCE-7RM3)</span>
+                                                                    <span class="s2">0</span>
+                                                                    <span class="s3">0</span>
+                                                                </P>                                  
+                                                                <P class="p2">
+                                                                    <img src="img/city_picture/con1.jpg" alt="">
+                                                                    <span class="w1">HERRZHAO</span>
+                                                                    <img src="img/city_picture/con2.jpg" alt="">
+                                                                    <span class="w2">2018.09.07</span>  
+                                                                    <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                                                    <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                                                </P>
+                                                            </div>   
+                                                        </div>
+                                            </li>
+                                            <li>
+                                                 <a href=""><img src="img/city_picture/9.jpg" alt=""></a>
+                                                  <img src="img/city_picture/sanjiao.png" alt="" class="trigon_cons">
+                                                   <div class="foot_cont">
+                                                        <div class="left">
+                                                                    <P class="p1">
+                                                                        <span class="s1">巴黎(ILCE-7RM3)</span>
+                                                                        <span class="s2">0</span>
+                                                                        <span class="s3">0</span>
+                                                                    </P>                                  
+                                                                    <P class="p2">
+                                                                        <img src="img/city_picture/con1.jpg" alt="">
+                                                                        <span class="w1">HERRZHAO</span>
+                                                                        <img src="img/city_picture/con2.jpg" alt="">
+                                                                        <span class="w2">2018.09.07</span>  
+                                                                        <a href="" class="g1"><img src="img/city_picture/con4.jpg"alt="" ></a>  
+                                                                        <a href="" class="g2"><img src="img/city_picture/con3.jpg"alt="" ></a>
+                                                                    </P>
+                                                        </div>   
+                                                   </div>
+                                            </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+           <div class="mainwrap1"     id="city_content2">
+            <img src="img/city_picture/v2.jpg" alt="">          
+            <img src="img/city_picture/v3.jpg" alt="">            
+        </div>      
+           <div class="mainwrap3 w960"   id="city_content3">
+            <h2>奖项设置</h2>
+            <div><img src="img/city_picture/jiangxiang.jpg" alt=""></div>
+        </div>
+        </div>
+       
+  
+   </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+    <script src="js/jquery-1.11.3.js"></script>
+<script>
+
+   $("div.City_picture>div.main_nav>div.main_nav_md>ul").on("click","[data-toggle=tab]",function(e){
+       e.preventDefault();
+       var $tar=$(e.target);
+     if($tar.is("a")){
+       if (!$tar.is(".nav_active")){
+           $tar.addClass("nav_active");
+           $tar.parent().siblings().find("a").removeClass("nav_active");
+
+           var id=$tar.attr("href");
+           $(id).addClass("content_active").siblings().removeClass("content_active");
+       }
+     }
+   })
+
+
+
+ 
+$("div.foot_cont>div.left>p.p2>a.g1").click(function(e){
+   e.preventDefault();  
+   var $a=$(this);
+   $a.children().attr("src","img/city_picture/con4_hover.jpg");
+   $a.parent().siblings().children(":last-child").html(1);
+});
+
+
+</script>
+
+
+</body>
+</html>
